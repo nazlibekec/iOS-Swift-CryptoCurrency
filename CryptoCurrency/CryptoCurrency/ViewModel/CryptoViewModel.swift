@@ -11,7 +11,10 @@ import Foundation
 struct CryptoListViewModel {
     // CryptoCurrency modelini bir liste halinde tutan bir değişken.
     let cryptoCurrencyList : [cryptoCurrency]
-    
+}
+
+// önceden oluşturulmuş struct veya class larda değişiklik yapar. MVVM de structlar olabildiğince yalın bırakılarak extension lar kullanılır.
+extension CryptoListViewModel {
     //Toplam kaç tane cryptoCurrencyList olduğunu verir.
     func numberOfRowsInSection() -> Int {
         return self.cryptoCurrencyList.count
@@ -23,10 +26,12 @@ struct CryptoListViewModel {
     }
 }
 
+
 // Tekil eleman ViewModel
 struct CryptoViewModel {
     let cryptoCurrency : cryptoCurrency
-    
+}
+extension CryptoViewModel {
     var name : String {
         return self.cryptoCurrency.currency
     }
