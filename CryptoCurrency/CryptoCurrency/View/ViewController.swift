@@ -56,6 +56,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.priceText.text = cryptoViewModel.price
         cell.currencyText.text = cryptoViewModel.name
         
+        let randomColor = UIColor.random
+        cell.backgroundColor = randomColor
+        
         return cell
     }
 }
